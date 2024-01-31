@@ -39,6 +39,7 @@ body {
     margin-bottom: 10px;
     background-color: #f8d7da;
     border: 1px solid #f5c6cb;
+    display: none;
 }
 .form form .name-details {
     display: flex;
@@ -61,6 +62,10 @@ body {
     transform: translateY(-50%);
     cursor: pointer;
 
+}
+.form form .field i.showpw::before {
+    color: #333;
+    content: "\f070";
 }
 .form form .field input {
     outline: none;
@@ -158,17 +163,33 @@ body {
     font-size: 16px;
     border-radius: 5px 0 0 5px;
     outline: none;
+    opacity: 0;
+    transition: all 0.5s ease;
+    pointer-events: none;
+}
+.users .search input.active {
+    opacity: 1;
+    transition: all 0.5s ease;
 }
 .users .search button {
     width: 47px;
     height: 42px;
-    color: #fff;
-    background-color: #333;
+    color: #333;
+    background-color: #fff;
     border: none;
     outline: none;
     border-radius: 0 5px 5px 0;
     font-size: 17px;
     cursor: pointer;
+    transition: all 0.5s ease;
+}
+.users .search button.active {
+    color: #fff;
+    background-color: #333;
+    transition: all 0.5s ease;
+}
+.users .search button.active i::before {
+    content: "\f00d";
 }
 .users-list {
     max-height: 350px;
