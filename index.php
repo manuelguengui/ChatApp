@@ -17,39 +17,40 @@
     <div class="wrapper">
         <section class="form signup">
             <header>Realtime Chat App</header>
-            <form action="#">
+            <form action="#" enctype="multipart/form-data">
                 <div class="error-text">This is an erro message</div>
                 <div class="name-details">
                     <div class="field input">
                         <label>First Name</label>
-                        <input type="text" name="" id="" placeholder="First name">
+                        <input type="text" name="fname" id="" placeholder="First name" required autofocus>
                     </div>
                     <div class="field input">
                         <label>Last Name</label>
-                        <input type="text" name="" id="" placeholder="Last name">
+                        <input type="text" name="lname" id="" placeholder="Last name" required>
                     </div>
                 </div>
                 <div class="field input">
                     <label>Email</label>
-                    <input type="text" name="" id="" placeholder="Enter your E-mail">
+                    <input type="email" name="email" id="email" placeholder="Enter your E-mail" required>
                 </div>
                 <div class="field input">
                     <label>Password</label>
-                    <input type="password" name="" id="" placeholder="Enter new Password">
+                    <input type="password" name="password" id="" placeholder="Enter new Password" required>
                     <i class="fa fa-eye"></i>
                 </div>
                 <div class="field image">
                     <label>Select Image</label>
-                    <input type="file" name="">
+                    <input type="file" name="image" required>
                 </div>
                 <div class="field button">
                     <input type="submit" value="Continue to Chat">
                 </div>
             </form>
-            <div class="link">Already signed up? <a href="#">Login now</a></div>
+            <div class="link">Already signed up? <a href="login.php">Login now</a></div>
         </section>
     </div>
     <script src="js/pass_show_hide.js"></script>
+    <script src="js/signup.js"></script>
 
 </body>
 

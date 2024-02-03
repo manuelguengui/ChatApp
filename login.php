@@ -18,15 +18,15 @@
         <section class="form login">
             <header>Realtime Chat App</header>
             <form action="#">
-                <div class="error-text">This is an erro message</div>
+                <div class="error-text"></div>
                
                 <div class="field input">
-                    <label>Email</label>
-                    <input type="text" name="" id="" placeholder="Enter your E-mail">
+                    <label for="email">Email</label>
+                    <input type="text" name="email" id="email" placeholder="Enter your E-mail" autofocus required>
                 </div>
                 <div class="field input">
-                    <label>Password</label>
-                    <input type="password" name="" id="" placeholder="Enter your Password">
+                    <label for="password">Password</label>
+                    <input type="password" name="password" id="password" placeholder="Enter your Password" required>
                     <i class="fa fa-eye"></i>
                 </div>
                 
@@ -34,11 +34,12 @@
                     <input type="submit" value="Continue to Chat">
                 </div>
             </form>
-            <div class="link">Not yet signed up? <a href="#">Signup now</a></div>
+            <div class="link">Not yet signed up? <a href="index.php">Signup now</a></div>
         </section>
     </div>
 
     <script src="js/pass_show_hide.js"></script>
+    <script src="js/login.js"></script>
 </body>
 
 </html>
