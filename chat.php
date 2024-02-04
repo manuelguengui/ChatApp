@@ -26,80 +26,37 @@ if(!isset($_SESSION["unique_id"])){
     <div class="wrapper">
         <section class="chat-area">
             <header>
-                
+
             <?php
-            $sql = mysqli_query($conn, "SELECT * FROM users WHERE uniqui_id = {$_SESSION['unique_id']}");
+            $user_id = mysqli_real_escape_string($conn, $_GET["user_id"]);
+            $sql = mysqli_query($conn, "SELECT * FROM users WHERE uniqui_id = {$user_id}");
             if(mysqli_num_rows($sql) > 0){
                 $row = mysqli_fetch_assoc($sql);
             }
             ?>
 
                 <a href="users.php" class="back-icon"><i class="fas fa-arrow-left"></i></a>
-                <img src="img.jpg" alt="" width="200px">
+                <img src="php/imgUser/<?php echo($row['img']);?>" alt="" width="200px">
                 <div class="details">
-                    <span>Coding Napel</span>
-                    <p>this is test massage</p>
+                    <span><?php echo($row['fname']. ' '. $row['lname']); ?></span>
+                    <p><?php echo($row['status']); ?></p>
                 </div>
             </header>
             <div class="chat-box">
-                <div class="chat outgoing">
-                    <div class="details">
-                        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit.</p>
-                    </div>
-                </div>
 
-                <div class="chat incoming">
-                    <img src="img.jpg" alt="">
-                    <div class="details">
-                        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit.</p>
-                    </div>
-                </div>
+                
 
-                <div class="chat outgoing">
-                    <div class="details">
-                        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit.</p>
-                    </div>
-                </div>
-
-                <div class="chat incoming">
-                    <img src="img.jpg" alt="">
-                    <div class="details">
-                        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit.</p>
-                    </div>
-                </div>
-
-                <div class="chat outgoing">
-                    <div class="details">
-                        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit.</p>
-                    </div>
-                </div>
-
-                <div class="chat incoming">
-                    <img src="img.jpg" alt="">
-                    <div class="details">
-                        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit.</p>
-                    </div>
-                </div>
-
-                <div class="chat outgoing">
-                    <div class="details">
-                        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit.</p>
-                    </div>
-                </div>
-
-                <div class="chat incoming">
-                    <img src="img.jpg" alt="">
-                    <div class="details">
-                        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit.</p>
-                    </div>
-                </div>
+                
             </div>
             <form action="#" class="typing-area">
-                <input type="text" name="" id="" placeholder="Type a message here...">
+                <input type="text" name="outgoing_id" id="" value="<?php echo($_SESSION['unique_id']); ?>" hidden>
+                <input type="text" name="income_id" id="" value="<?php echo($user_id); ?>" hidden>
+                <input type="text" name="message" class="input-field" id="" placeholder="Type a message here...">
                 <button><i class="fab fa-telegram-plane"></i></button>
             </form>
         </section>
     </div>
+    <script src="js/chat.js"></script>
 </body>
 
 </html>
