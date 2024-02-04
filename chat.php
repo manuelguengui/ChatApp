@@ -1,3 +1,12 @@
+<?php
+session_start();
+include_once("php/config.php");
+
+if(!isset($_SESSION["unique_id"])){
+    header("location: login.php");
+}
+
+?>
 <!DOCTYPE html>
 <html lang="pt">
 
@@ -17,7 +26,15 @@
     <div class="wrapper">
         <section class="chat-area">
             <header>
-                <a href="#" class="back-icon"><i class="fas fa-arrow-left"></i></a>
+                
+            <?php
+            $sql = mysqli_query($conn, "SELECT * FROM users WHERE uniqui_id = {$_SESSION['unique_id']}");
+            if(mysqli_num_rows($sql) > 0){
+                $row = mysqli_fetch_assoc($sql);
+            }
+            ?>
+
+                <a href="users.php" class="back-icon"><i class="fas fa-arrow-left"></i></a>
                 <img src="img.jpg" alt="" width="200px">
                 <div class="details">
                     <span>Coding Napel</span>
