@@ -18,7 +18,10 @@ while ($row = mysqli_fetch_assoc($sql)) {
   // trimming massage if word are more than 28
 
   (strlen($result) > 18)? $msg = substr($result, 0, 28)."..." : $msg = $result;
+
   ($outgoing_id == $row2["outgoing_msg_id"]) ? $you = "you: ": $you= "him: ";
+
+  ($row["status"] == "Offline now") ? $offline = "offline": $offline = "";
 
   $output .= '<a href="chat.php?user_id='.$row['uniqui_id'].'">
 <div class="content">
@@ -29,7 +32,7 @@ while ($row = mysqli_fetch_assoc($sql)) {
     </div>
 </div>
 
-<div class="status-dot"><i class="fas fa-circle"></i></div>
+<div class="status-dot '.$offline.'"><i class="fas fa-circle"></i></div>
 </a>';
 
 }

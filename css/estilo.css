@@ -221,7 +221,7 @@ body {
 }
 
 /* we'll use this class in php to show offline ststus */
-.users-list a .status-dot .offline {
+.users-list a .status-dot.offline {
     color: #ccc;
 }
 /* -------------------------Chat area css code------------------------------- */
