@@ -16,3 +16,11 @@ if(isset($_SESSION["unique_id"])){
   header("location: ../login.php");
 }
 ?>
+
+
+<!-- CREATE TABLE messages (
+message_id INT PRIMARY KEY NOT NULL AUTO_INCREMENT,
+    outgoing_msg_id INT,
+    income_msg_id INT,
+    msg TEXT
+) -->

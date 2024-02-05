@@ -42,7 +42,7 @@ if(!isset($_SESSION["unique_id"])){
                         <p><?php echo($row['status']); ?></p>
                     </div>
                 </div>
-                <a href="php/logout.php '.$row[].'" class="logout">logout</a>
+                <a href="php/logout.php" class="logout">logout</a>
             </header>
 
             <div class="search">
