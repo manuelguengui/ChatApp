@@ -1,3 +1,4 @@
+/* By: Manuel Francisco Chimdemba Guengui copywrite Coding Napel*/
 const form = document.querySelector(".typing-area"),
 inputField = form.querySelector(".input-field"),
 sendBtn = form.querySelector("button"),

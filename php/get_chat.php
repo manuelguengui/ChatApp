@@ -34,4 +34,4 @@ if (isset($_SESSION["unique_id"])) {
   }
 } else {
   header("location: ../login.php");
-}
+}/* By: Manuel Francisco Chimdemba Guengui copywrite Coding Napel*/

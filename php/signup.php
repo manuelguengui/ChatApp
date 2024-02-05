@@ -65,3 +65,4 @@ if (!empty($fname) && !empty($lname) && !empty($email) && !empty($password)) {
 } else {
   echo ("All the input field are requered");
 }
+/* By: Manuel Francisco Chimdemba Guengui copywrite Coding Napel*/

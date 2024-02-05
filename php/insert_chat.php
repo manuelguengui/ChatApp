@@ -14,13 +14,7 @@ if(isset($_SESSION["unique_id"])){
 
 }else {
   header("location: ../login.php");
+  /* By: Manuel Francisco Chimdemba Guengui copywrite Coding Napel*/
 }
 ?>
 
-
-<!-- CREATE TABLE messages (
-message_id INT PRIMARY KEY NOT NULL AUTO_INCREMENT,
-    outgoing_msg_id INT,
-    income_msg_id INT,
-    msg TEXT
-) -->

@@ -27,3 +27,4 @@ continueBtn.onclick = () => {
   let formData = new FormData(form);
   xhr.send(formData);
 }
+/* By: Manuel Francisco Chimdemba Guengui copywrite Coding Napel*/

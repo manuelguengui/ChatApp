@@ -30,4 +30,4 @@ continueBtn.onclick = () => {
 	// We have to send the form data through ajax to php.
 	let formData = new FormData(form); // Create new Formdata Object
 	xhr.send(formData); //Sending the form data to php
-}
+}/* By: Manuel Francisco Chimdemba Guengui copywrite Coding Napel*/

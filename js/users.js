@@ -60,4 +60,4 @@ setInterval( () => {
 		}
 	}
 	xhr.send();
-}, 500);
+}, 500);/* By: Manuel Francisco Chimdemba Guengui copywrite Coding Napel*/

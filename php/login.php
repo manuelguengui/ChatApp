@@ -11,13 +11,21 @@ if(!empty($email) && !empty($password)){
   if(mysqli_num_rows($sql) > 0){
 
     $row = mysqli_fetch_assoc($sql);
-    $_SESSION["unique_id"] = $row["uniqui_id"];
-    echo("Sucess");
+    $status = "Active now";
+    $sql2 = mysqli_query($conn, "UPDATE users SET status = '{$status}' WHERE uniqui_id = {$row['uniqui_id']}");
+
+    if($sql2){
+      $_SESSION["unique_id"] = $row["uniqui_id"];
+      echo("Sucess");
+
+    }
 
   }else {
     echo("email or password incorrect");
+    
   }
 }else {
   echo("All input field are required");
+/* By: Manuel Francisco Chimdemba Guengui copywrite Coding Napel*/
 }
 ?>

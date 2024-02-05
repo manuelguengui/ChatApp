@@ -18,7 +18,7 @@ if(!isset($_SESSION["unique_id"])){
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Criação de um chat, prendendo com coding Napel">
-    <meta name="author" content="Manuel Guengui">
+    <meta name="author" content="Manuel Francisco Chimdemba Guengui">
     <link rel="stylesheet" href="css/estilo.css">
     <title>Realtime chat | Users</title>
 </head>
@@ -42,7 +42,7 @@ if(!isset($_SESSION["unique_id"])){
                         <p><?php echo($row['status']); ?></p>
                     </div>
                 </div>
-                <a href="php/logout.php" class="logout">logout</a>
+                <a href="php/logout.php?logout=<?php echo $row['uniqui_id']; ?>" class="logout">logout</a>
             </header>
 
             <div class="search">

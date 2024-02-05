@@ -1,3 +1,5 @@
+
+/* By: Manuel Francisco Chimdemba Guengui copywrite Coding Napel*/
 * {
     margin: 0;
     padding: 0;
@@ -217,7 +219,7 @@ body {
 }
 .users-list a .status-dot {
     width: 10px;
-    color: #468669;
+    color: blue;
 }
 
 /* we'll use this class in php to show offline ststus */

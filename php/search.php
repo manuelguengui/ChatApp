@@ -14,5 +14,6 @@ if(mysqli_num_rows($sql) > 0){
   $output .= "No users found related to your search";
 }
 echo($output);
+/* By: Manuel Francisco Chimdemba Guengui copywrite Coding Napel*/
 
 ?>
